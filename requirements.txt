@@ -1,0 +1,40 @@
+# pibackup_diagnose – Python-Abhaengigkeiten (Stdlib only).
+#
+# Projekt:     pibackup_diagnose
+# Modul:       requirements.txt
+# Version:     1.1.0
+# Stand:       2026-08-24
+# Abhaengig:   nur Python-Standardbibliothek (Python ≥ 3.10)
+# Bezug:       requirements.txt (leer – Stdlib only)
+# Lizenz:      MIT
+# Upstream:    https://github.com/RaspberryFpc/pibackup (RaspberryFpc)
+# Erstellt mit: Cursor Grok 4.6
+# Autor:       (FFHB) / RadioBBS
+#
+# Beschreibung
+# ------------
+# Keine Drittanbieter-Pakete. Das Diagnose-Skript nutzt nur die
+# Python-Standardbibliothek und vorhandene Linux-Werkzeuge (dpkg,
+# loginctl, ldd, timeout).
+#
+# Historie
+# --------
+# Version 1.0.0 – 2026-08-24 – Datei angelegt (Stdlib only), Projekt ausgelagert.
+# Version 1.1.0 – 2026-08-24 – Stand an 1.1.0 angeglichen.
+#
+# Aufruf / Nutzung
+# ----------------
+# python3 -m pip install -r requirements.txt
+#
+# Empfohlen (Linux):
+#   python3 -m venv .venv
+#   source .venv/bin/activate
+#   python -m pip install -r requirements.txt
+#
+# Empfohlen (Windows):
+#   python -m venv .venv
+#   .venv\Scripts\activate
+#   python -m pip install -r requirements.txt
+#
+# Beispiel-Paketzeile (nicht aktiv, Projekt bleibt Stdlib-only):
+# # zstandard>=0.22.0
