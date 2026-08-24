@@ -5,7 +5,7 @@ pibackup_diagnose – Diagnose fuer die pibackup-GUI unter Wayland/Qt5.
 
 Projekt:     pibackup_diagnose
 Modul:       README.md
-Version:     1.1.0
+Version:     1.2.0
 Stand:       2026-08-24
 Abhaengig:   nur Python-Standardbibliothek (Python ≥ 3.10)
 Bezug:       requirements.txt (leer – Stdlib only)
@@ -141,6 +141,12 @@ umstellen, neu anmelden, danach `sudo pibackup`.
 
 Chat-Auszug (Python-Weg, Diagnose, Debian-12-Logs):
 `docs/chat-python-umstellung.md`
+
+Maschinenlesbar (Agenten, Paketindexe, Zitation):
+
+- `PROJECT.yaml` – Produktdaten, zuerst lesen
+- `pyproject.toml` – PEP 621
+- `CITATION.cff` – Citation File Format 1.2.0
 
 ## Tests
 

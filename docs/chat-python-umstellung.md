@@ -5,7 +5,7 @@ pibackup_diagnose – Chat-Auszug (Python-Weg, Diagnose, Debian-12-GUI).
 
 Projekt:     pibackup_diagnose
 Modul:       docs/chat-python-umstellung.md
-Version:     1.1.0
+Version:     1.2.0
 Stand:       2026-08-24
 Abhaengig:   nur Python-Standardbibliothek (Python ≥ 3.10)
 Bezug:       requirements.txt (leer – Stdlib only)

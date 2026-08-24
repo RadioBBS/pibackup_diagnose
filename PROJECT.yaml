@@ -1,0 +1,65 @@
+# Werte muessen mit project_meta.py uebereinstimmen (eine Quelle der Wahrheit).
+# Styleguide 1.7.0 / Software-Standard 1.2.0 – Agent zuerst diese Datei lesen.
+#
+# Projekt:     pibackup_diagnose
+# Modul:       PROJECT.yaml
+# Version:     1.2.0
+# Stand:       2026-08-24
+# Abhaengig:   nur Python-Standardbibliothek (Python >= 3.10)
+# Bezug:       requirements.txt (leer – Stdlib only)
+# Lizenz:      MIT
+# Upstream:    https://github.com/RaspberryFpc/pibackup (RaspberryFpc)
+# Erstellt mit: Cursor Grok 4.6
+# Autor:       (FFHB) / RadioBBS
+#
+# Historie
+# --------
+# Version 1.2.0 – 2026-08-24 – Datei angelegt (Software-Standard 1.2.0).
+
+name: pibackup_diagnose
+description: Diagnose fuer Startprobleme der pibackup-GUI unter Debian GNU/Linux (Wayland, sudo/root, Qt5/xcb).
+language: python
+python_min: "3.10"
+license: MIT
+version: "1.2.0"
+stand: "2026-08-24"
+author: (FFHB) / RadioBBS
+upstream: https://github.com/RaspberryFpc/pibackup
+scripts:
+  - pibackup_diagnose.py
+  - pibackup_diagnose.sh
+  - project_meta.py
+repository:
+  host: github
+  owner: RadioBBS
+  name: pibackup_diagnose
+  url: https://github.com/RadioBBS/pibackup_diagnose
+  visibility: public
+  default_branch: main
+standards:
+  styleguide: "1.7.0"
+  styleguide_file: "%USERPROFILE%\\Documents\\Cursor\\.Security-and-Styleguide\\0-Style‑Guide.txt"
+  software_standard: "1.2.0"
+  software_standard_file: "%USERPROFILE%\\Documents\\Cursor\\.Security-and-Styleguide\\MY-SOFTWARE-STANDARD v1.0.0.txt"
+testing:
+  framework: unittest
+  command: python -m unittest tests.test_pibackup_diagnose
+  required: true
+  live_raspberry_pi: false
+cli:
+  help: [--help, -h]
+  version: [--version]
+  wait_at_end: [--Ende, -E]
+maintenance:
+  status: active
+  owner: RadioBBS
+documentation:
+  language: de
+security:
+  secrets_in_repo: false
+  scans_dot_directories: false
+machine_readable:
+  - PROJECT.yaml
+  - pyproject.toml
+  - CITATION.cff
+  - .github/workflows/ci.yml

@@ -3,7 +3,7 @@ pibackup_diagnose – Unittests fuer das Wayland/Qt-Diagnose-Skript.
 
 Projekt:     pibackup_diagnose
 Modul:       tests/test_pibackup_diagnose.py
-Version:     1.1.0
+Version:     1.2.0
 Stand:       2026-08-24
 Abhaengig:   nur Python-Standardbibliothek (Python ≥ 3.10)
 Bezug:       requirements.txt (leer – Stdlib only)
@@ -21,6 +21,7 @@ Historie
 --------
 Version 1.0.0 – 2026-08-24 – Tests ins eigene Projekt verschoben.
 Version 1.1.0 – 2026-08-24 – Tests fuer PATH/--fix-path.
+Version 1.2.0 – 2026-08-24 – Abgleich PROJECT.yaml / pyproject.toml / CITATION.cff.
 
 Aufruf / Nutzung
 ----------------
@@ -406,6 +407,75 @@ class PathFixTests(unittest.TestCase):
         ]
         steps = diagnose.next_steps_for(items, "wayland", False)
         self.assertIn("--fix-path", steps[0])
+
+
+class MachineReadableMetaTests(unittest.TestCase):
+    """YAML/TOML/CFF muessen zur Metadatenquelle passen."""
+
+    def _read_root(self, name: str) -> str:
+        """Liest eine Root-Datei als UTF-8.
+
+        Parameter:
+            name: Dateiname relativ zum Projektroot.
+        Rueckgabewert:
+            Dateiinhalt.
+        Fehlerfaelle:
+            FileNotFoundError wenn die Datei fehlt.
+        Beispiel:
+            self._read_root("PROJECT.yaml")
+        """
+        return (ROOT / name).read_text(encoding="utf-8")
+
+    def test_project_yaml_version(self) -> None:
+        """PROJECT.yaml version entspricht project_meta.
+
+        Parameter:
+            keine
+        Rueckgabewert:
+            keine
+        Fehlerfaelle:
+            AssertionError bei Abweichung oder fehlender Datei.
+        Beispiel:
+            test_project_yaml_version()
+        """
+        text = self._read_root("PROJECT.yaml")
+        self.assertIn(f'version: "{meta.VERSION}"', text)
+        self.assertIn(f'stand: "{meta.STAND}"', text)
+        self.assertIn(f"license: {meta.LIZENZ}", text)
+
+    def test_pyproject_toml_version(self) -> None:
+        """pyproject.toml version entspricht project_meta.
+
+        Parameter:
+            keine
+        Rueckgabewert:
+            keine
+        Fehlerfaelle:
+            AssertionError bei Abweichung oder fehlender Datei.
+        Beispiel:
+            test_pyproject_toml_version()
+        """
+        text = self._read_root("pyproject.toml")
+        self.assertIn(f'version = "{meta.VERSION}"', text)
+        self.assertIn(f'license = {{ text = "{meta.LIZENZ}" }}', text)
+        self.assertIn(f'requires-python = ">={meta.PYTHON_MIN}"', text)
+
+    def test_citation_cff_version(self) -> None:
+        """CITATION.cff version entspricht project_meta.
+
+        Parameter:
+            keine
+        Rueckgabewert:
+            keine
+        Fehlerfaelle:
+            AssertionError bei Abweichung oder fehlender Datei.
+        Beispiel:
+            test_citation_cff_version()
+        """
+        text = self._read_root("CITATION.cff")
+        self.assertIn(f'version: "{meta.VERSION}"', text)
+        self.assertIn(f"license: {meta.LIZENZ}", text)
+        self.assertIn("cff-version: 1.2.0", text)
 
 
 if __name__ == "__main__":

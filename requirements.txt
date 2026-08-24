@@ -2,7 +2,7 @@
 #
 # Projekt:     pibackup_diagnose
 # Modul:       requirements.txt
-# Version:     1.1.0
+# Version:     1.2.0
 # Stand:       2026-08-24
 # Abhaengig:   nur Python-Standardbibliothek (Python ≥ 3.10)
 # Bezug:       requirements.txt (leer – Stdlib only)
@@ -21,6 +21,7 @@
 # --------
 # Version 1.0.0 – 2026-08-24 – Datei angelegt (Stdlib only), Projekt ausgelagert.
 # Version 1.1.0 – 2026-08-24 – Stand an 1.1.0 angeglichen.
+# Version 1.2.0 – 2026-08-24 – PROJECT.yaml, pyproject.toml, CITATION.cff, CI.
 #
 # Aufruf / Nutzung
 # ----------------

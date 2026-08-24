@@ -1,0 +1,37 @@
+# pibackup_diagnose – Python-Projektdefinition.
+#
+# Projekt:     pibackup_diagnose
+# Modul:       pyproject.toml
+# Version:     1.2.0
+# Stand:       2026-08-24
+# Abhaengig:   nur Python-Standardbibliothek (Python >= 3.10)
+# Bezug:       requirements.txt (leer – Stdlib only)
+# Lizenz:      MIT
+# Upstream:    https://github.com/RaspberryFpc/pibackup (RaspberryFpc)
+# Erstellt mit: Cursor Grok 4.6
+# Autor:       (FFHB) / RadioBBS
+#
+# Historie
+# --------
+# Version 1.2.0 – 2026-08-24 – PEP-621-Metadaten (Software-Standard 1.2.0).
+#
+#   python -m pip install -r requirements.txt
+
+[project]
+name = "pibackup-diagnose"
+version = "1.2.0"
+description = "Diagnose fuer Startprobleme der pibackup-GUI unter Debian GNU/Linux (Wayland, sudo/root, Qt5/xcb)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "(FFHB) / RadioBBS" }]
+keywords = ["raspberry-pi", "debian", "wayland", "qt5", "diagnose", "pibackup"]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/RadioBBS/pibackup_diagnose"
+Repository = "https://github.com/RadioBBS/pibackup_diagnose"
+Upstream = "https://github.com/RaspberryFpc/pibackup"
+
+[project.scripts]
+pibackup-diagnose = "pibackup_diagnose:main"

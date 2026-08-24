@@ -4,7 +4,7 @@ pibackup_diagnose – Diagnose-Skript fuer GUI-Start von pibackup unter Wayland/
 
 Projekt:     pibackup_diagnose
 Modul:       pibackup_diagnose.py
-Version:     1.1.0
+Version:     1.2.0
 Stand:       2026-08-24
 Abhaengig:   nur Python-Standardbibliothek (Python ≥ 3.10)
 Bezug:       requirements.txt (leer – Stdlib only)
@@ -24,6 +24,7 @@ Historie
 --------
 Version 1.0.0 – 2026-08-24 – Eigenstaendiges Projekt, aus pibackup ausgelagert.
 Version 1.1.0 – 2026-08-24 – Sucht /usr/lib/pibackup/pibackup, --fix-path.
+Version 1.2.0 – 2026-08-24 – PROJECT.yaml, pyproject.toml, CITATION.cff, CI.
 
 Aufruf / Nutzung
 ----------------

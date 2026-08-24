@@ -5,7 +5,7 @@ pibackup_diagnose – Release-Historie.
 
 Projekt:     pibackup_diagnose
 Modul:       CHANGELOG.md
-Version:     1.1.0
+Version:     1.2.0
 Stand:       2026-08-24
 Abhaengig:   nur Python-Standardbibliothek (Python ≥ 3.10)
 Bezug:       requirements.txt (leer – Stdlib only)
@@ -16,6 +16,14 @@ Autor:       (FFHB) / RadioBBS
 ```
 
 Alle wesentlichen Aenderungen dieses Produkts.
+
+## [1.2.0] – 2026-08-24
+
+### Added
+
+- Maschinenlesbare Produktdateien: `PROJECT.yaml`, `pyproject.toml`,
+  `CITATION.cff` und `.github/workflows/ci.yml` (Software-Standard 1.2.0).
+- Unittest prueft, dass Version in YAML/TOML mit `project_meta.py` uebereinstimmt.
 
 ## [1.1.0] – 2026-08-24
 
