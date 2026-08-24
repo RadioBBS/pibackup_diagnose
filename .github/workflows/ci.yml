@@ -1,0 +1,34 @@
+# pibackup_diagnose – GitHub-Actions: Unittests ohne Raspberry Pi.
+#
+# Projekt:     pibackup_diagnose
+# Modul:       .github/workflows/ci.yml
+# Version:     1.2.0
+# Stand:       2026-08-24
+# Abhaengig:   nur Python-Standardbibliothek (Python >= 3.10)
+# Bezug:       requirements.txt (leer – Stdlib only)
+# Lizenz:      MIT
+# Upstream:    https://github.com/RaspberryFpc/pibackup (RaspberryFpc)
+# Erstellt mit: Cursor Grok 4.6
+# Autor:       (FFHB) / RadioBBS
+#
+# Historie
+# --------
+# Version 1.2.0 – 2026-08-24 – CI fuer unittest (Software-Standard 1.2.0).
+
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: Unittests
+        run: python -m unittest tests.test_pibackup_diagnose

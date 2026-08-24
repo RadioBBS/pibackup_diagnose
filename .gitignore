@@ -1,0 +1,41 @@
+# pibackup_diagnose – Git-Ignore fuer lokale und erzeugte Dateien.
+#
+# Projekt:     pibackup_diagnose
+# Modul:       .gitignore
+# Version:     1.2.0
+# Stand:       2026-08-24
+# Abhaengig:   nur Python-Standardbibliothek (Python ≥ 3.10)
+# Bezug:       requirements.txt (leer – Stdlib only)
+# Lizenz:      MIT
+# Upstream:    https://github.com/RaspberryFpc/pibackup (RaspberryFpc)
+# Erstellt mit: Cursor Grok 4.6
+# Autor:       (FFHB) / RadioBBS
+#
+# Beschreibung
+# ------------
+# Schliesst lokale Arbeitsordner, virtuelle Umgebungen und
+# Diagnose-Protokolle vom Repository aus.
+#
+# Historie
+# --------
+# Version 1.0.0 – 2026-08-24 – Datei angelegt, Projekt ausgelagert.
+# Version 1.1.0 – 2026-08-24 – Stand an 1.1.0 angeglichen.
+# Version 1.2.0 – 2026-08-24 – PROJECT.yaml, pyproject.toml, CITATION.cff, CI.
+
+__local__/
+__scratch__/
+__testdata__/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.log
+*.pyc
+lib/
+*.o
+*.ppu
+*.or
+*.compiled
+*.dbg
+.DS_Store
+Thumbs.db
