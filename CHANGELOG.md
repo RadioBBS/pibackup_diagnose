@@ -25,7 +25,7 @@ Alle wesentlichen Aenderungen dieses Produkts.
 
 ### Changed
 
-- Startausgabe: blauer Rahmen mit Kurzname, Zweckzeile, Version und Stand.
+- Startausgabe: hellcyaner Rahmen mit Kurzname, Zweckzeile, Version und Stand.
 - Python-Untergrenze 3.11.
 - Plattformprüfung: Windows 11 und Linux.
 
