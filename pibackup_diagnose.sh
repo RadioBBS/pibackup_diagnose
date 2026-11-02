@@ -3,9 +3,9 @@
 #
 # Projekt:     pibackup_diagnose
 # Modul:       pibackup_diagnose.sh
-# Version:     1.2.0
-# Stand:       2026-08-24
-# Abhaengig:   nur Python-Standardbibliothek (Python ≥ 3.10)
+# Version:     1.2.1
+# Stand:       2026-11-02
+# Abhaengig:   nur Python-Standardbibliothek (Python ≥ 3.11)
 # Bezug:       requirements.txt (leer – Stdlib only)
 # Lizenz:      MIT
 # Upstream:    https://github.com/RaspberryFpc/pibackup (RaspberryFpc)
@@ -23,6 +23,7 @@
 # Version 1.0.0 – 2026-08-24 – Eigenstaendiges Projekt, Wrapper aus pibackup ausgelagert.
 # Version 1.1.0 – 2026-08-24 – --fix-path fuer Konsolen-Symlink.
 # Version 1.2.0 – 2026-08-24 – PROJECT.yaml, pyproject.toml, CITATION.cff, CI.
+# Version 1.2.1 – 2026-11-02 – Startausgabe und Python 3.11 nach Styleguide 2.1.0.
 #
 # Aufruf / Nutzung
 # ----------------

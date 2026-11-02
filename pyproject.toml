@@ -2,9 +2,9 @@
 #
 # Projekt:     pibackup_diagnose
 # Modul:       pyproject.toml
-# Version:     1.2.0
-# Stand:       2026-08-24
-# Abhaengig:   nur Python-Standardbibliothek (Python >= 3.10)
+# Version:     1.2.1
+# Stand:       2026-11-02
+# Abhaengig:   nur Python-Standardbibliothek (Python >= 3.11)
 # Bezug:       requirements.txt (leer – Stdlib only)
 # Lizenz:      MIT
 # Upstream:    https://github.com/RaspberryFpc/pibackup (RaspberryFpc)
@@ -14,15 +14,16 @@
 # Historie
 # --------
 # Version 1.2.0 – 2026-08-24 – PEP-621-Metadaten (Software-Standard 1.2.0).
+# Version 1.2.1 – 2026-11-02 – Startausgabe und Python 3.11 nach Styleguide 2.1.0.
 #
 #   python -m pip install -r requirements.txt
 
 [project]
 name = "pibackup-diagnose"
-version = "1.2.0"
+version = "1.2.1"
 description = "Diagnose fuer Startprobleme der pibackup-GUI unter Debian GNU/Linux (Wayland, sudo/root, Qt5/xcb)."
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 license = { text = "MIT" }
 authors = [{ name = "(FFHB) / RadioBBS" }]
 keywords = ["raspberry-pi", "debian", "wayland", "qt5", "diagnose", "pibackup"]

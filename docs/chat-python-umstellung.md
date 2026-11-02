@@ -5,14 +5,18 @@ pibackup_diagnose – Chat-Auszug (Python-Weg, Diagnose, Debian-12-GUI).
 
 Projekt:     pibackup_diagnose
 Modul:       docs/chat-python-umstellung.md
-Version:     1.2.0
-Stand:       2026-08-24
-Abhaengig:   nur Python-Standardbibliothek (Python ≥ 3.10)
+Version:     1.2.1
+Stand:       2026-11-02
+Abhaengig:   nur Python-Standardbibliothek (Python ≥ 3.11)
 Bezug:       requirements.txt (leer – Stdlib only)
 Lizenz:      MIT
 Upstream:    https://github.com/RaspberryFpc/pibackup (RaspberryFpc)
 Erstellt mit: Cursor Grok 4.6
 Autor:       (FFHB) / RadioBBS
+
+Historie
+--------
+Version 1.2.1 – 2026-11-02 – Startausgabe und Python 3.11 nach Styleguide 2.1.0.
 ```
 
 Auszug aus dem Cursor-Chat vom 2026-08-24, ab der Bewertung
@@ -29,13 +33,13 @@ auf Standard-Linux-Tools sitzt (`losetup`, `e2fsck`, `resize2fs`, `zstd`,
 `mount`, `chroot`). Python auf dem Pi ist vorhanden, wartbar und
 unabhängig von CodeTyphon.
 
-| Bereich | Aufwand | Hinweis |
-|---|---|---|
-| Image lesen/schreiben, Loop-Devices, `e2fsck`/`resize2fs` | mittel | 1:1 nachvollziehbar |
-| MBR, PARTUUID, `fstab`/`cmdline.txt` | mittel, aber kritisch | hier sitzt die Boot-Sicherheit |
-| Exclude-Engine, User/SSH/WLAN-Setup | gering–mittel | klar abgegrenzt |
-| zstd mit Fortschritt | gering | `zstandard` oder CLI `zstd` |
-| GUI | mittel | nicht Qt5 als root |
+| Bereich                                                   | Aufwand               | Hinweis                        |
+|-----------------------------------------------------------|-----------------------|--------------------------------|
+| Image lesen/schreiben, Loop-Devices, `e2fsck`/`resize2fs` | mittel                | 1:1 nachvollziehbar            |
+| MBR, PARTUUID, `fstab`/`cmdline.txt`                      | mittel, aber kritisch | hier sitzt die Boot-Sicherheit |
+| Exclude-Engine, User/SSH/WLAN-Setup                       | gering–mittel         | klar abgegrenzt                |
+| zstd mit Fortschritt                                      | gering                | `zstandard` oder CLI `zstd`    |
+| GUI                                                       | mittel                | nicht Qt5 als root             |
 
 **Wichtig:** nicht die aktuelle Architektur kopieren (eine Qt-App als
 root). Besser trennen:
@@ -168,13 +172,13 @@ Skript-Version dafür: **1.1.0** (sucht `/usr/lib/pibackup/pibackup`,
 Auswertung der beiden Berichte (Bookworm, Kernel 6.12, Python 3.11,
 wayfire + XWayland, pibackup 2.1.0).
 
-| Befund | Ohne sudo | Mit sudo |
-|---|---|---|
-| System | Debian 12, ARM64, Wayland | gleich |
-| Paket | installiert, Binary unter `/usr/lib/pibackup/pibackup` | gleich |
-| Befehl `pibackup` | nicht im PATH | nicht im PATH |
-| Display | `DISPLAY=:0`, `WAYLAND_DISPLAY=wayland-1` | `DISPLAY=:0` bleibt, Wayland-Socket von root nicht die User-Sitzung |
-| Probe | nicht gelaufen | Qt lädt Plugins, dann Absturz |
+| Befund            | Ohne sudo                                              | Mit sudo                                                            |
+|-------------------|--------------------------------------------------------|---------------------------------------------------------------------|
+| System            | Debian 12, ARM64, Wayland                              | gleich                                                              |
+| Paket             | installiert, Binary unter `/usr/lib/pibackup/pibackup` | gleich                                                              |
+| Befehl `pibackup` | nicht im PATH                                          | nicht im PATH                                                       |
+| Display           | `DISPLAY=:0`, `WAYLAND_DISPLAY=wayland-1`              | `DISPLAY=:0` bleibt, Wayland-Socket von root nicht die User-Sitzung |
+| Probe             | nicht gelaufen                                         | Qt lädt Plugins, dann Absturz                                       |
 
 **Eigentlicher GUI-Absturz (Probe, Exit 127):**
 

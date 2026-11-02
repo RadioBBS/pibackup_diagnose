@@ -3,9 +3,9 @@ pibackup_diagnose – Gemeinsame Projekmetadaten (eine Quelle).
 
 Projekt:     pibackup_diagnose
 Modul:       project_meta.py
-Version:     1.2.0
-Stand:       2026-08-24
-Abhaengig:   nur Python-Standardbibliothek (Python ≥ 3.10)
+Version:     1.2.1
+Stand:       2026-11-02
+Abhaengig:   nur Python-Standardbibliothek (Python ≥ 3.11)
 Bezug:       requirements.txt (leer – Stdlib only)
 Lizenz:      MIT
 Upstream:    https://github.com/RaspberryFpc/pibackup (RaspberryFpc)
@@ -22,6 +22,7 @@ Historie
 Version 1.0.0 – 2026-08-24 – Eigenstaendiges Projekt, aus pibackup ausgelagert.
 Version 1.1.0 – 2026-08-24 – Binary-Suche unter /usr/lib/pibackup, --fix-path.
 Version 1.2.0 – 2026-08-24 – PROJECT.yaml, pyproject.toml, CITATION.cff, CI.
+Version 1.2.1 – 2026-11-02 – Startausgabe und Python 3.11 nach Styleguide 2.1.0.
 
 Aufruf / Nutzung
 ----------------
@@ -33,12 +34,12 @@ Wird importiert, nicht als Programm gestartet:
 from __future__ import annotations
 
 PROJEKT = "pibackup_diagnose"
-VERSION = "1.2.0"
-STAND = "2026-08-24"
+VERSION = "1.2.1"
+STAND = "2026-11-02"
 LIZENZ = "MIT"
 UPSTREAM = "https://github.com/RaspberryFpc/pibackup (RaspberryFpc)"
 AUTOR = "(FFHB) / RadioBBS"
-PYTHON_MIN = "3.10"
+PYTHON_MIN = "3.11"
 
 APP_BIN_NAME = "pibackup"
 DIAGNOSE_NAME = "pibackup_diagnose"

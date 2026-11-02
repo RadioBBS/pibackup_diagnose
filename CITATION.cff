@@ -2,9 +2,9 @@
 #
 # Projekt:     pibackup_diagnose
 # Modul:       CITATION.cff
-# Version:     1.2.0
-# Stand:       2026-08-24
-# Abhaengig:   nur Python-Standardbibliothek (Python >= 3.10)
+# Version:     1.2.1
+# Stand:       2026-11-02
+# Abhaengig:   nur Python-Standardbibliothek (Python >= 3.11)
 # Bezug:       requirements.txt (leer – Stdlib only)
 # Lizenz:      MIT
 # Upstream:    https://github.com/RaspberryFpc/pibackup (RaspberryFpc)
@@ -14,13 +14,14 @@
 # Historie
 # --------
 # Version 1.2.0 – 2026-08-24 – Datei angelegt (Software-Standard 1.2.0).
+# Version 1.2.1 – 2026-11-02 – Startausgabe und Python 3.11 nach Styleguide 2.1.0.
 
 cff-version: 1.2.0
 message: "Bitte mit diesen Metadaten zitieren."
 title: pibackup_diagnose
 abstract: Diagnose fuer Startprobleme der pibackup-GUI unter Debian GNU/Linux (Wayland, sudo/root, Qt5/xcb).
-version: "1.2.0"
-date-released: "2026-08-24"
+version: "1.2.1"
+date-released: "2026-11-02"
 license: MIT
 authors:
   - name: "(FFHB) / RadioBBS"

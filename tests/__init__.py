@@ -3,9 +3,9 @@ pibackup_diagnose – Testdatei-Paketmarker.
 
 Projekt:     pibackup_diagnose
 Modul:       tests/__init__.py
-Version:     1.2.0
-Stand:       2026-08-24
-Abhaengig:   nur Python-Standardbibliothek (Python ≥ 3.10)
+Version:     1.2.1
+Stand:       2026-11-02
+Abhaengig:   nur Python-Standardbibliothek (Python ≥ 3.11)
 Bezug:       requirements.txt (leer – Stdlib only)
 Lizenz:      MIT
 Upstream:    https://github.com/RaspberryFpc/pibackup (RaspberryFpc)
@@ -21,6 +21,7 @@ Historie
 Version 1.0.0 – 2026-08-24 – Paketmarker, Projekt ausgelagert.
 Version 1.1.0 – 2026-08-24 – Stand an 1.1.0 angeglichen.
 Version 1.2.0 – 2026-08-24 – PROJECT.yaml, pyproject.toml, CITATION.cff, CI.
+Version 1.2.1 – 2026-11-02 – Startausgabe und Python 3.11 nach Styleguide 2.1.0.
 
 Aufruf / Nutzung
 ----------------

@@ -5,20 +5,24 @@ pibackup_diagnose – Diagnose fuer die pibackup-GUI unter Wayland/Qt5.
 
 Projekt:     pibackup_diagnose
 Modul:       README.md
-Version:     1.2.0
-Stand:       2026-08-24
-Abhaengig:   nur Python-Standardbibliothek (Python ≥ 3.10)
+Version:     1.2.1
+Stand:       2026-11-02
+Abhaengig:   nur Python-Standardbibliothek (Python ≥ 3.11)
 Bezug:       requirements.txt (leer – Stdlib only)
 Lizenz:      MIT
 Upstream:    https://github.com/RaspberryFpc/pibackup (RaspberryFpc)
 Erstellt mit: Cursor Grok 4.6
 Autor:       (FFHB) / RadioBBS
+
+Historie
+--------
+Version 1.2.1 – 2026-11-02 – Startausgabe und Python 3.11 nach Styleguide 2.1.0.
 ```
 
 ## Zweck
 
 Prueft auf einem Raspberry Pi (Debian GNU/Linux 12, Wayland), warum die
-**pibackup**-GUI nach der Installation nicht erscheint. Das Skript aendert
+**pibackup**-GUI nach der Installation (https://github.com/RaspberryFpc/pibackup)nicht erscheint. Das Skript aendert
 nichts am System (ausser optional `--probe`, das pibackup kurz startet).
 
 Fuer wen: Betrieb am Pi-Desktop, wenn `sudo pibackup` kein Fenster oeffnet.
@@ -26,7 +30,7 @@ Fuer wen: Betrieb am Pi-Desktop, wenn `sudo pibackup` kein Fenster oeffnet.
 ## Voraussetzungen
 
 - Raspberry Pi mit Desktop (nicht Lite ohne grafische Sitzung)
-- Python 3.10 oder neuer (Debian 12: `python3`)
+- Python 3.11 oder neuer (Debian 12: `python3`)
 - pibackup darf, muss aber nicht bereits installiert sein
 - Aufruf in einem Terminal **auf dem grafischen Desktop**
   (nicht nur per SSH ohne Display)
@@ -36,6 +40,23 @@ Keine pip-Pakete noetig. Optional:
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
+python -m pip install -r requirements.txt
+```
+
+
+## Installation
+
+Skript kopieren (LF-Zeilenenden) und ausfuehrbar machen:
+
+```bash
+chmod +x pibackup_diagnose.sh
+```
+
+Keine Extra-Systempakete ausser der in den Voraussetzungen genannten Firmware/OS.
+
+Abhaengigkeitsdatei auf dem Entwicklungsrechner (auch ohne Paketzeilen):
+
+```bash
 python -m pip install -r requirements.txt
 ```
 
